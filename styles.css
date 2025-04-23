@@ -16,6 +16,19 @@ body {
     background-color: rgb(20, 30, 40);
 }
 
+h1 {
+    font-family: 'Anton', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: linen;
+}
+
 main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
@@ -25,6 +38,11 @@ main {
 img {
     width: 100%;
     object-fit: cover;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
 }
 
 .heading {
@@ -92,6 +110,14 @@ img {
     font-family: "Raleway", sans-serif;
 }
 
+.quote::before {
+    content: '" ';
+}
+
+.quote::after {
+    content: '" ';
+}
+
 .text-with-images {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -122,4 +148,43 @@ img {
 
 .image-1, .image-3 {
     grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 720px) {
+    .image-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text-with-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+    
+    .hero-subtitle,
+    .author,
+    .quote,
+    .list-title {
+        font-size: 1.8rem;
+    }
+    
+    .social-icons {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1.6rem;
+    } 
+}
+
+@media only screen and (max-width: 420px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
 }
